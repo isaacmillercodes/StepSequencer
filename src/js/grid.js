@@ -16,9 +16,9 @@ $(document).on('ready', function() {
   for (var x = 1; x <= 4; x++) {
     for (var y = 1; y <= 4; y++) {
       if (y === 1) {
-        $('.squareGrid').append('<div class="glyphicon glyphicon-star beatMarkers beat' + y + '"></div>');
+        $('.squareGrid').append('<div class="beatMarkers beat' + y + '"><p>' + y + '</p></div>');
       } else {
-        $('.squareGrid').append('<div class="glyphicon glyphicon-star-empty beatMarkers beat' + y + '"></div>');
+        $('.squareGrid').append('<div class="beatMarkers beat' + y + '"><p>' + y + '</p></div>');
       }
     }
   }

@@ -1,18 +1,31 @@
 /* add custom styles */
 
 /*Colors:
-  background: #9F88FF
-  default melody square: #6D57C9
-  default drum square: #33217D
-  active square: #C9BD57
+  background: #E6FFEC
+  default melody square: #57C972
+  default drum square: #217D36
+  active square: #C95761
   sweeper: white
-  active with sweeper: #7D721D
+  active with sweeper: #7D0A14
 
 
 */
 
+h1, h2, h3, h4, h5, h6, p {
+  color: #217D36;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5vw;
+}
+
+h2 {
+  font-size: 2vw;
+}
+
 body {
-  background-color: #9F88FF;
+  background-color: #E6FFEC;
 }
 
 .singleSquare,
@@ -24,25 +37,27 @@ body {
 }
 
 .beatMarkers {
-  color: #33217D;
-  background-color: #9F88FF;
+  color: #217D36;
+  background-color: #E6FFEC;
 }
 
-.glyphicon-star,
-.glyphicon-star-empty {
-  padding: .6vw;
+.beatMarkers p {
+  padding: 0 .85vw;
+  font-size: 1vw;
+  /*border: .1vw solid #000;*/
 }
+
 
 .drums {
-  background-color: #33217D;
+  background-color: #217D36;
 }
 
 .melody {
-  background-color: #6D57C9;
+  background-color: #57C972;
 }
 
 .active {
-  background-color: #C9BD57;
+  background-color: #C95761;
 }
 
 .squareGrid {
@@ -54,5 +69,23 @@ body {
 .playSurface {
   width: 100vw;
   height: 100vw;
-  background-color: #9F88FF;
+  background-color: #E6FFEC;
+}
+
+.melodyLabel,
+.percLabel {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  display: block;
+  position: relative;
+  bottom: 51vw;
+  right: 25vw;
+
+}
+
+.melodyLabel {
+  bottom: 75vw;
 }
