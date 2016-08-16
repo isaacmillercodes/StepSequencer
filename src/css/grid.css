@@ -1,11 +1,48 @@
 /* add custom styles */
 
-.singleSquare {
-  background-color: green;
+/*Colors:
+  background: #9F88FF
+  default melody square: #6D57C9
+  default drum square: #33217D
+  active square: #C9BD57
+  sweeper: white
+  active with sweeper: #7D721D
+
+
+*/
+
+body {
+  background-color: #9F88FF;
+}
+
+.singleSquare,
+.beatMarkers {
   height: 2.25vw;
   width: 2.25vw;
   margin: .125vw;
   display: inline-block;
+}
+
+.beatMarkers {
+  color: #33217D;
+  background-color: #9F88FF;
+}
+
+.glyphicon-star,
+.glyphicon-star-empty {
+  padding: .6vw;
+}
+
+.drums {
+  background-color: #33217D;
+}
+
+.melody {
+  background-color: #6D57C9;
+}
+
+.active {
+  background-color: #C9BD57;
 }
 
 .squareGrid {
@@ -17,4 +54,5 @@
 .playSurface {
   width: 100vw;
   height: 100vw;
+  background-color: #9F88FF;
 }
