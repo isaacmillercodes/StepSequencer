@@ -1,0 +1,20 @@
+/* add custom styles */
+
+.singleSquare {
+  background-color: green;
+  height: 2.25vw;
+  width: 2.25vw;
+  margin: .125vw;
+  display: inline-block;
+}
+
+.squareGrid {
+  width: 40vw;
+  height: 40vw;
+  margin: 0 30vw;
+}
+
+.playSurface {
+  width: 100vw;
+  height: 100vw;
+}
