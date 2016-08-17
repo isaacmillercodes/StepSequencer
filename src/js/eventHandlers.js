@@ -12,29 +12,63 @@ $(document).on('click', '.active', function() {
 
 //Start Sweeper
 
-function startSweeper() {
-  var timer = 1;
+// function sweeperCycle() {
+//   var clickCounter = 1;
+//   var beat = 1;
+//
+//   setInterval(function() {
+//     if (beat === 17) {
+//       beat = 1;
+//       $('.col-16').removeClass('sweeper');
+//     }
+//     $('.col-' + beat).addClass('sweeper');
+//     $('.col-' + (beat - 1)).removeClass('sweeper');
+//     beat++;
+//
+//   }, 250);
+// }
 
-  setInterval(function() {
-    if (timer === 17) {
-      timer = 1;
-      $('.col-16').removeClass('sweeper');
-    }
-    $('.col-' + timer).addClass('sweeper');
-    $('.col-' + (timer - 1)).removeClass('sweeper');
-    timer++;
-
-  }, 250);
-}
+var clickCount = 0;
 
 $(document).on('click', '.playButton', function(event) {
   event.preventDefault();
-  startSweeper();
+  clickCount++;
+  if (clickCount > 1) {
+    stopSweeper();
+    clickCount = 0;
+    beat = 1;
+    //$('.singleSquare').removeClass('sweeper');
+
+  } else {
+    startSweeper();
+  }
+
 });
 
-$(document).on('click', '.stopButton', function(event) {
-  event.preventDefault();
+// var clickCounter = 1;
+var beat = 1;
 
-  $('.singleSquare').removeClass('sweeper');
+function sweeperCycle() {
+  if (beat === 17) {
+    beat = 1;
+    $('.col-16').removeClass('sweeper');
+  }
+  $('.col-' + beat).addClass('sweeper');
+  $('.col-' + (beat - 1)).removeClass('sweeper');
+  beat++;
 
-});
+}
+
+
+
+var newSweeper;
+
+function startSweeper() {
+
+ newSweeper = setInterval(sweeperCycle, 375);
+
+}
+
+function stopSweeper() {
+  clearInterval(newSweeper);
+}
