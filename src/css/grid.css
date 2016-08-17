@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
   text-align: center;
-  font-size: 5vw;
+  font-size: 3vw;
 }
 
 h2 {
@@ -88,4 +88,13 @@ body {
 
 .melodyLabel {
   bottom: 75vw;
+}
+
+.playButton {
+  margin-left: 47vw;
+}
+
+.sweeper {
+  background-color: powderblue;
+  opacity: .98;
 }

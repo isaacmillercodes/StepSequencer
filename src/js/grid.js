@@ -24,3 +24,7 @@ $(document).on('ready', function() {
   }
 
 });
+
+if ($('.singleSquare').hasClass('sweeper') && $('.singleSquare').hasClass('active')) {
+  $('.singleSquare').css('background-color', 'black');
+}
