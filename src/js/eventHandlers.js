@@ -12,22 +12,6 @@ $(document).on('click', '.active', function() {
 
 //Start Sweeper
 
-// function sweeperCycle() {
-//   var clickCounter = 1;
-//   var beat = 1;
-//
-//   setInterval(function() {
-//     if (beat === 17) {
-//       beat = 1;
-//       $('.col-16').removeClass('sweeper');
-//     }
-//     $('.col-' + beat).addClass('sweeper');
-//     $('.col-' + (beat - 1)).removeClass('sweeper');
-//     beat++;
-//
-//   }, 250);
-// }
-
 var clickCount = 0;
 
 $(document).on('click', '.playButton', function(event) {
@@ -37,7 +21,7 @@ $(document).on('click', '.playButton', function(event) {
     stopSweeper();
     clickCount = 0;
     beat = 1;
-    //$('.singleSquare').removeClass('sweeper');
+    $('.singleSquare').removeClass('sweeper');
 
   } else {
     startSweeper();
