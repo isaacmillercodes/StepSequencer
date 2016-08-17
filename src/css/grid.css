@@ -5,7 +5,7 @@
   default melody square: #57C972
   default drum square: #217D36
   active square: #C95761
-  sweeper: white
+  sweeper: #b0e0e6
   active with sweeper: #7D0A14
 
 
@@ -60,6 +60,15 @@ body {
   background-color: #C95761;
 }
 
+.sweeper {
+  background-color: #b0e0e6;
+  opacity: .98;
+}
+
+.sweeper.active {
+  background-color: #5C2866;
+}
+
 .squareGrid {
   width: 40vw;
   height: 40vw;
@@ -92,9 +101,4 @@ body {
 
 .playButton {
   margin-left: 47vw;
-}
-
-.sweeper {
-  background-color: powderblue;
-  opacity: .98;
 }
