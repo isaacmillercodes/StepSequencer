@@ -25,6 +25,7 @@ $(document).on('click', '.playButton', function(event) {
 
   } else {
     startSweeper();
+    sweeperSounds();
   }
 
 });
@@ -49,10 +50,49 @@ var newSweeper;
 
 function startSweeper() {
 
- newSweeper = setInterval(sweeperCycle, 375);
+  newSweeper = setInterval(sweeperCycle, 375);
 
 }
 
 function stopSweeper() {
   clearInterval(newSweeper);
 }
+
+// function sweeperSounds() {
+//   if ($('.sweeper').hasClass('active')) {
+//     if ($(this).hasClass('row-1')) {
+//       playSound(G5);
+//     } else if ($(this).hasClass('row-2')) {
+//       playSound(E5);
+//     } else if ($(this).hasClass('row-3')) {
+//       playSound(D5);
+//     } else if ($(this).hasClass('row-4')) {
+//       playSound(C5);
+//     } else if ($(this).hasClass('row-5')) {
+//       playSound(A5);
+//     } else if ($(this).hasClass('row-6')) {
+//       playSound(B4);
+//     } else if ($(this).hasClass('row-7')) {
+//       playSound(A4);
+//     } else if ($(this).hasClass('row-8')) {
+//       playSound(G4);
+//     } else if ($(this).hasClass('row-9')) {
+//       playSound(F4);
+//     } else if ($(this).hasClass('row-10')) {
+//       playSound(E4);
+//     } else if ($(this).hasClass('row-11')) {
+//       playSound(D4);
+//     } else if ($(this).hasClass('row-12')) {
+//       playSound(C4);
+//     } else if ($(this).hasClass('row-13')) {
+//       playSound(hihat);
+//     } else if ($(this).hasClass('row-14')) {
+//       playSound(clap);
+//     } else if ($(this).hasClass('row-15')) {
+//       playSound(snare);
+//     } else if ($(this).hasClass('row-16')) {
+//       playSound(kick);
+//     }
+//   }
+//
+// }
